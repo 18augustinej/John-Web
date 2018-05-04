@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<link rel="shortcut icon" href="favicon.png">
+<title> Javascript </title> 
+<LINK REL=StyleSheet HREF="Style3.css" TYPE="text/css" >
+
+<body onload="setInterval('updateTime()',1000)">
+<script>
+  function showAlert() { 
+    var myText = "Hey.";
+    alert (myText);
+  }
+</script>
+ <button onclick="showAlert()">Show Alert</button>
+ 
+	<div id="clock">
+<script>
+    function updateTime() { 
+    var now = new Date();
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+	var currentTime = hours + ':' + minutes + ':' + seconds; 
+	var myClock = document.getElementById('clock');
+	myClock.innerHTML = currentTime;
+ }
+</script>
+</div>
+
+</body>
+</html>
